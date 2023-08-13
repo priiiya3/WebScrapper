@@ -27,16 +27,16 @@ Before you begin, ensure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/your-username/web-scraping-app.git
+```git clone https://github.com/your-username/web-scraping-app.git ```
 
 2. Change to the project directory:
-cd web-scraping-app
+```cd web-scraping-app```
 
 3. Install the required dependencies:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 4. Start the Django development server:
-python manage.py runserver
+```python manage.py runserver```
 
 
 
