@@ -13,11 +13,11 @@ def home(request):
             if extracted_data:
                 # Generate a unique filename based on a counter
                 counter = 1
-                while os.path.exists(f'extracted_text_{counter}.txt'):
+                while os.path.exists(f'scraped_data/extracted_text_{counter}.txt'):
                     counter += 1
-                filename = f'extracted_text_{counter}.txt'
+                filename = f'scraped_data/extracted_text_{counter}.txt'
 
-                # Write extracted data to the unique file
+                # Write extracted data to the unique file inside the "scraped_data" folder
                 with open(filename, 'w', encoding='utf-8') as file:
                     file.write(extracted_data)
 
