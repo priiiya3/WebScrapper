@@ -1,0 +1,73 @@
+/* styles.css */
+
+body{
+    background-image: url("../images/background.jpg");
+    background-size: cover; /* Scale the image to cover the entire container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center;
+}
+
+
+/* Centre the H1 tag heading */
+
+
+/* Style for navigation bar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+
+/* Center the form */
+.center-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+/* Style for input box */
+.input-box {
+    width: 300px;
+    padding: 10px;
+    border: 2.5px solid #66a3e4;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-box:focus {
+    border-color: #0a6292;
+}
+
+/* Style for submit button */
+.btn-primary {
+    background-color: #66a3e4;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0a6292;
+    ;
+}
+
+
+/* Style for success message */
+.scraped-message {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
