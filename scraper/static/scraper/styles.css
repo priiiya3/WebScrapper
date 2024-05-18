@@ -1,21 +1,38 @@
 /* styles.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 body{
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/heist.jpg");
     background-size: cover; /* Scale the image to cover the entire container */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center center;
+
 }
 
 
 /* Centre the H1 tag heading */
+.navbar-brand{
+    font-weight: 700;
+    /* font-family: "Oswald", sans-serif; */
 
-
-/* Style for navigation bar */
-.navbar {
-    margin-bottom: 20px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
+/* Style for homepage heading */
+.app-name{
+    color: antiquewhite;
+    
+}
+
+.heading{
+    font-size: 50px;
+    text-shadow: 3px 4px #382929;
+    font-family: "Oswald", sans-serif;
+}
+
+.data-para{
+    color: bisque;
+    font-size: x-large;
+}
 
 /* Center the form */
 .center-form {
@@ -30,13 +47,13 @@ body{
 
 /* Style for input box */
 .input-box {
-    width: 300px;
+    width: 500px;
     padding: 10px;
-    border: 2.5px solid #66a3e4;
+    border: 2.5px solid #000000;
     border-radius: 5px;
     outline: none;
     font-size: 16px;
-    color: #333;
+    color: #aa4848;
     margin-right: 20px;
     margin-bottom: 100px;
     transition: border-color 0.3s ease-in-out;
@@ -48,7 +65,7 @@ body{
 
 /* Style for submit button */
 .btn-primary {
-    background-color: #66a3e4;
+    background-color: #c23c3c;
     color: #fff;
     border: none;
     border-radius: 10px;
