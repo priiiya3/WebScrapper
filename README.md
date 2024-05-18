@@ -9,10 +9,10 @@ This is a simple web application built with Django that allows users to input a 
   - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Getting Started
+Put on your red mask, enter the URL, and start your digital heist. Extract data with stealth and efficiency.
 
 ### Prerequisites
 
