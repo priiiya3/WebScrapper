@@ -1,7 +1,7 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 body{
-    background-image: url("../images/heist.jpg");
+    /* background-image: url("../images/heist.jpg"); */
     background-size: cover; /* Scale the image to cover the entire container */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center center;
