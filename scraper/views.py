@@ -1,7 +1,21 @@
-import os
+import requests
+from bs4 import BeautifulSoup
+from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import URLForm
-from .scrape import scrape_text_from_url
+
+def scrape_text_from_url(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        extracted_text = soup.get_text()
+        
+        # Remove extra spaces, newlines, and unknown characters
+        cleaned_text = ' '.join(extracted_text.split())
+        
+        return cleaned_text
+    else:
+        return None
 
 def home(request):
     if request.method == 'POST':
@@ -11,21 +25,13 @@ def home(request):
             extracted_data = scrape_text_from_url(url)
 
             if extracted_data:
-                # Generate a unique filename based on a counter
-                counter = 1
-                while os.path.exists(f'scraped_data/extracted_text_{counter}.txt'):
-                    counter += 1
-                filename = f'scraped_data/extracted_text_{counter}.txt'
-
-                # Write extracted data to the unique file inside the "scraped_data" folder
-                with open(filename, 'w', encoding='utf-8') as file:
-                    file.write(extracted_data)
-
-                message = f'Text extracted and saved successfully as {filename}.'
+                # Return the extracted data as a downloadable file response
+                response = HttpResponse(extracted_data, content_type='text/plain')
+                response['Content-Disposition'] = 'attachment; filename="extracted_text.txt"'
+                return response
             else:
                 message = 'Error: Unable to extract text.'
-
-            return render(request, 'scraper/home.html', {'form': form, 'message': message})
+                return render(request, 'scraper/home.html', {'form': form, 'message': message})
     else:
         form = URLForm()
     return render(request, 'scraper/home.html', {'form': form})
